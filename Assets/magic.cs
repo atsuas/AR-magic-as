@@ -5,6 +5,7 @@ using UnityEngine;
 public class Magic : MonoBehaviour
 {
     public ParticleSystem particle;
+    public ParticleSystem particle1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,13 @@ public class Magic : MonoBehaviour
 
     public void OnClick()
     {
-        particle.Play();
+        if (transform.tag == "Power")
+        {
+            particle.Play();
+        }
+        else if (transform.tag == "Bomb")
+        {
+            particle1.Play();
+        }
     }
 }
