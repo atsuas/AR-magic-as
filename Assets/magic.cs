@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class magic : MonoBehaviour
+public class Magic : MonoBehaviour
 {
+    public ParticleSystem particle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class magic : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnClick()
+    {
+        particle.Play();
     }
 }

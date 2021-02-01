@@ -347,6 +347,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 208191184}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &436170466 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800002, guid: 906ef3748a66347cfb2d72de10092732,
+    type: 3}
+  m_PrefabInstance: {fileID: 208191184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &698536172
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +584,7 @@ RectTransform:
   m_GameObject: {fileID: 728618850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.33, y: 0.88, z: 1}
   m_Children: []
   m_Father: {fileID: 1465568613}
   m_RootOrder: 0
@@ -866,6 +872,7 @@ GameObject:
   - component: {fileID: 1465568616}
   - component: {fileID: 1465568615}
   - component: {fileID: 1465568614}
+  - component: {fileID: 1465568617}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -890,7 +897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -709, y: -275}
+  m_AnchoredPosition: {x: -902, y: -275}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465568614
@@ -935,7 +942,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1465568615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1465568617}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465568615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,6 +991,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465568612}
   m_CullTransparentMesh: 0
+--- !u!114 &1465568617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465568612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6340f5b12d952425cae8e4e38245f163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 436170466}
 --- !u!1 &1744402212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: -183}
+  m_AnchoredPosition: {x: -415, y: -183}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770234540
